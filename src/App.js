@@ -8,7 +8,6 @@ class App extends Component {
 
     this.handleDistanceChange = this.handleDistanceChange.bind(this);
     this.handleTimeChange = this.handleTimeChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleDistanceChange(event) {
@@ -17,12 +16,9 @@ class App extends Component {
 
   handleTimeChange(event) {
     this.setState({ time: event.target.value });
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
     this.setState({ result: this.state.distance * 1.60934 })
   }
+
 
   render() {
     return (
@@ -37,7 +33,6 @@ class App extends Component {
             time in minutes:
           <input type="text" value={this.state.time} onChange={this.handleTimeChange} />
           </label>
-          <input type="submit" value="Submit" />
         </form>
         <div>
           <p>
