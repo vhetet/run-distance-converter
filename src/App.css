@@ -35,20 +35,17 @@
   }
 }
 
-p, form {
-  padding: 1em;
-}
+
 
 form label {
   width: 100%;
-  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .result {
-  width: 400px;
+  width: 600px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -56,7 +53,7 @@ form label {
 }
 
 .pure-form label * {
-  width: 200px;
+  width: 300px;
 }
 
 .result p {
@@ -66,7 +63,8 @@ form label {
 
 .result p span {
   justify-content: space-between;
-  width: 200px;
+  width: 300px;
+  text-align: left;
 }
 
 #root div {

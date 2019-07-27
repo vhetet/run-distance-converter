@@ -35,7 +35,7 @@ class App extends Component {
           <input type="text" value={this.state.time} onChange={this.handleTimeChange} />
           </label>
         </form>
-        <div className="result">
+        <div className="result pure-form">
           <p>
             <span>result in km: </span>
             <span>{this.state.result}</span>
