@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../node_modules/purecss/build/pure-min.css';
 import './App.css';
 
 class App extends Component {
@@ -24,37 +25,44 @@ class App extends Component {
     return (
       <div>
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="pure-form">
           <label>
-            distance in miles:
+            <span>distance in miles:</span>
           <input type="text" value={this.state.distance} onChange={this.handleDistanceChange} />
           </label>
           <label>
-            time in minutes:
+            <span>time in minutes:</span>
           <input type="text" value={this.state.time} onChange={this.handleTimeChange} />
           </label>
         </form>
-        <div>
+        <div className="result">
           <p>
-            result in km: {this.state.result}
+            <span>result in km: </span>
+            <span>{this.state.result}</span>
           </p>
           <p>
-            pace in min/km: {(this.state.time / (this.state.distance * 1.60934)).toFixed(3)}
+            <span>pace in min/km: </span>
+            <span>{this.state.time && (this.state.time / (this.state.distance * 1.60934)).toFixed(3)}</span>
           </p>
           <p>
-            pace in min/miles: {(this.state.time / this.state.distance).toFixed(3)}
+            <span>pace in min/miles: </span>
+            <span>{this.state.time && (this.state.time / this.state.distance).toFixed(3)}</span>
           </p>
           <p>
-            equivalence for 5km: {((this.state.time / (this.state.distance * 1.60934)) * 5).toFixed(3)}
+            <span>equivalence for 5km: </span>
+            <span>{this.state.time && ((this.state.time / (this.state.distance * 1.60934)) * 5).toFixed(3)}</span>
           </p>
           <p>
-            equivalence for 10km: {((this.state.time / (this.state.distance * 1.60934)) * 10).toFixed(3)}
+            <span>equivalence for 10km: </span>
+            <span>{this.state.time && ((this.state.time / (this.state.distance * 1.60934)) * 10).toFixed(3)}</span>
           </p>
           <p>
-            equivalence for half-marathon: {((this.state.time / (this.state.distance * 1.60934)) * 21.1).toFixed(3)}
+            <span>equivalence for half-marathon: </span>
+            <span>{this.state.time && ((this.state.time / (this.state.distance * 1.60934)) * 21.1).toFixed(3)}</span>
           </p>
           <p>
-            equivalence for 3.5 miles: {((this.state.time / this.state.distance) * 3.5).toFixed(3)}
+            <span>equivalence for 3.5 miles: </span>
+            <span>{this.state.time && ((this.state.time / this.state.distance) * 3.5).toFixed(3)}</span>
           </p>
         </div>
       </div>
