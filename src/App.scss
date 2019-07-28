@@ -62,9 +62,23 @@ form label {
 }
 
 .result p span {
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  text-align: left;
+}
+
+.result p span.left {
   width: 300px;
   text-align: left;
+}
+
+.result p span.right {
+  width: 150px;
+  text-align: right;
+}
+
+.result p span.unit {
+  width: 150px;
+  text-align: right;
 }
 
 #root div {
