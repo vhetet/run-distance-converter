@@ -1,12 +1,11 @@
 import React from 'react';
 
-const DistanceConverterResults = ({ result, time, distance }) => {
+const DistanceConverterResults = ({ time, distance }) => {
     return (
-
         <div className="result pure-form">
             <p>
                 <span className="left">result in km: </span>
-                <span className="right">{result}</span>
+                <span className="right">{distance && distance * 1.60934}</span>
                 <span className="unit">km</span>
             </p>
             <p>

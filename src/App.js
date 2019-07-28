@@ -6,7 +6,7 @@ import DistanceConverterResult from './components/DistanceConverterResults'
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { distance: '', time: '', result: '' };
+    this.state = { distance: '', time: '' };
 
     this.handleDistanceChange = this.handleDistanceChange.bind(this);
     this.handleTimeChange = this.handleTimeChange.bind(this);
@@ -18,9 +18,7 @@ class App extends Component {
 
   handleTimeChange(event) {
     this.setState({ time: event.target.value });
-    this.setState({ result: this.state.distance * 1.60934 });
   }
-
 
   render() {
     return (
@@ -35,7 +33,7 @@ class App extends Component {
             <input type="text" value={this.state.time} onChange={this.handleTimeChange} />
           </label>
         </form>
-        <DistanceConverterResult result={this.state.result} time={this.state.time} distance={this.state.distance}></DistanceConverterResult>
+        <DistanceConverterResult time={this.state.time} distance={this.state.distance}></DistanceConverterResult>
       </div>
     );
   }
